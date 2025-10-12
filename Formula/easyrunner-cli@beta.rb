@@ -7,7 +7,7 @@ class EasyrunnerCliATBeta < Formula
   sha256 "38e6f1297cc2f9766823c69ebfcbcf4474957717bc893b9064cd50d75d20bed1"
   version "0.0.7b0"
 
-  depends_on "python@3.11"
+  depends_on "python@3.13"
 
   def install
     virtualenv_install_with_resources
