@@ -1,16 +1,24 @@
 class EasyrunnerCliATBeta < Formula
-  include Language::Python::Virtualenv
-
-  desc "Beta builds of EasyRunner CLI - Single server self-hosting PaaS"
-  homepage "https://github.com/janaka/easyrunner"
-  url "https://github.com/janaka/easyrunner/releases/download/v0.0.7b0/easyrunner_cli-0.0.7b0-py3-none-any.whl"
-  sha256 "38e6f1297cc2f9766823c69ebfcbcf4474957717bc893b9064cd50d75d20bed1"
-  version "0.0.7b0"
+  desc "EasyRunner CLI - Beta version"
+  homepage "https://easyrunner.xyz"
+  url "https://files.pythonhosted.org/packages/py3/e/easyrunner-cli/easyrunner_cli-0.0.7b0-py3-none-any.whl"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
   depends_on "python@3.13"
 
   def install
-    virtualenv_install_with_resources
+    # Create a virtual environment and install the package with all dependencies
+    python_version = "3.13"
+    python = Formula["python@#{python_version}"].opt_bin/"python#{python_version}"
+    venv = libexec/"venv"
+    system python, "-m", "venv", venv
+    pip = venv/"bin/pip"
+    system pip, "install", "--upgrade", "pip"
+    system pip, "install", "--upgrade", "setuptools", "wheel"
+    system pip, "install", "easyrunner-cli==0.0.7b0-py3"
+    
+    # Create wrapper script for the er command
+    bin.install_symlink venv/"bin/er"
   end
 
   test do
