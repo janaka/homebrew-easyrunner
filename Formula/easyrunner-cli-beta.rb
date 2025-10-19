@@ -15,7 +15,7 @@ class EasyrunnerCliBeta < Formula
     pip = venv/"bin/pip"
     system pip, "install", "--upgrade", "pip"
     system pip, "install", "--upgrade", "setuptools", "wheel"
-    system pip, "install", "easyrunner-cli==0.0.7b0-py3"
+    system pip, "install", "easyrunner-cli==0.0.7b0"
     
     # Create wrapper script for the er command
     bin.install_symlink venv/"bin/er"
