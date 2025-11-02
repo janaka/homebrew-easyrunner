@@ -17,8 +17,10 @@ class EasyrunnerCliBeta < Formula
     system pip, "install", "--upgrade", "setuptools", "wheel"
     system pip, "install", "easyrunner-cli==0.0.8b0"
     
-    # Create wrapper script for the er command
-    bin.install_symlink venv/"bin/er"
+    # Create wrapper script for the command aliases defined in pyproject.toml (i.e. `er`, `easy`, etc.)
+    %w[er easy].each do |cmd|
+      bin.install_symlink venv/"bin"/cmd
+    end
   end
 
   test do
