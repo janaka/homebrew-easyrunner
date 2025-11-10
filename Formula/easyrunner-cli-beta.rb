@@ -1,7 +1,7 @@
 class EasyrunnerCliBeta < Formula
   desc "EasyRunner CLI - Beta version"
   homepage "https://easyrunner.xyz"
-  url "https://files.pythonhosted.org/packages/py3/e/easyrunner-cli/easyrunner_cli-0.9.1b4-py3-none-any.whl"
+  url "https://files.pythonhosted.org/packages/bc/23/6b5f3d9b700b7489e397293d878e373bdecaf62317c0ab1b2507b231e2c0/easyrunner_cli-0.9.1b4-py3-none-any.whl"
   sha256 "f77ab771f1e478f5d5a6aa46fdfb48ea1049bb4ed919fe11a654682d2e0eafad"
 
   depends_on "python@3.13"
