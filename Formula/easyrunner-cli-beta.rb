@@ -1,8 +1,8 @@
 class EasyrunnerCliBeta < Formula
   desc "EasyRunner CLI - Beta version"
   homepage "https://easyrunner.xyz"
-  url "https://files.pythonhosted.org/packages/3e/68/48cc0e6f27aedac06256504a5cfcf6c572fb881083f3e7d381a21fb2c4c8/easyrunner_cli-0.10.1b2-py3-none-any.whl"
-  sha256 "7494eafdadecbd450dadc31b6425450b932f0da37804ee072cada1f83fb435ac"
+  url "https://files.pythonhosted.org/packages/a6/3c/14af953f7ae0b684802d74a5106ecf10df1b199ed9afeec27a11351607c1/easyrunner_cli-0.10.1b1-py3-none-any.whl"
+  sha256 "9841094b61bb61e539b2ec32b7c4eab8da5cb89b6848b0f48bdedb598c6151bf"
 
   depends_on "python@3.13"
 
@@ -15,7 +15,7 @@ class EasyrunnerCliBeta < Formula
     pip = venv/"bin/pip"
     system pip, "install", "--upgrade", "pip"
     system pip, "install", "--upgrade", "setuptools", "wheel"
-    system pip, "install", "easyrunner-cli==0.10.1b2"
+    system pip, "install", "easyrunner-cli==0.10.1b1"
     
     # Create wrapper script for the command aliases defined in pyproject.toml (i.e. `er`, `easy`, etc.)
     %w[er easy].each do |cmd|
