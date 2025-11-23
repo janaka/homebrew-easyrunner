@@ -1,4 +1,4 @@
-class EasyrunnerCli < Formula
+class EasyrunnerCliAT0110b3 < Formula
   desc "EasyRunner CLI - Single server self-hosting PaaS"
   homepage "https://easyrunner.xyz"
   url "https://files.pythonhosted.org/packages/27/fb/bf5a8aa975d4667b96a95814b230be9732b21b15ec1ec8382b32d6fa06f6/easyrunner_cli-0.11.0b3-py3-none-any.whl"
