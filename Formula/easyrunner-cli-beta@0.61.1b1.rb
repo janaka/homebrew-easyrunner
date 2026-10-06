@@ -1,4 +1,4 @@
-class EasyrunnerCliBeta < Formula
+class EasyrunnerCliBetaAT0611b1 < Formula
   desc "EasyRunner CLI - Beta version"
   homepage "https://easyrunner.xyz"
   url "https://files.pythonhosted.org/packages/d3/60/9de8c66a2928bba4e944d9b02ead0c140a1020d2c25d35796dcbbf56e3c5/easyrunner_cli-0.61.1b1-py3-none-any.whl"
